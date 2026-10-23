@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/logos/channels/x.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OpenSpace — Don't just save information. Put it to work.</title>
+    <meta name="description" content="OpenSpace connects your captures, ideas, and knowledge — then uses AI agents to help you make sense of it, uncover connections, and move from a scattered thought to your next big decision." />
+    
+    <!-- Preload Geist Fonts -->
+    <link rel="preload" href="/fonts/Geist-Variable.woff2" as="font" type="font/woff2" crossorigin="" />
+    <link rel="preload" href="/fonts/GeistMono-Variable.woff2" as="font" type="font/woff2" crossorigin="" />
+
+    <!-- Theme initialization script to prevent flash -->
+    <script>
+      (function() {
+        try {
+          var t = localStorage.getItem('vibecoder-kit-theme');
+          if (t === 'dark' || (!t && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+          }
+        } catch(e) {}
+      })();
+    </script>
+  </head>
+  <body class="min-h-screen flex flex-col">
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
