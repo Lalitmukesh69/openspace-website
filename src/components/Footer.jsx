@@ -58,7 +58,7 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a href="/contact" style={{color: 'var(--color-footer-band-foreground)', opacity: '0.85'}} className="transition-colors hover:opacity-100">
+                <a href="https://x.com/Lalit20054411" target="_blank" rel="noopener noreferrer" style={{color: 'var(--color-footer-band-foreground)', opacity: '0.85'}} className="transition-colors hover:opacity-100">
                   Contact
                 </a>
               </li>
