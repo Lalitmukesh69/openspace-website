@@ -1,4 +1,6 @@
 import React from 'react';
+import claudeInterfaceImg from '../assets/claude-interface.png';
+import collectionsGridImg from '../assets/collections-dashboard-grid.png';
 
 export default function AgentSpotlight() {
   return (
@@ -23,50 +25,24 @@ export default function AgentSpotlight() {
           
           {/* Card 1: Turn information overload into clear next steps */}
           <div className="flex flex-col" style={{background: 'var(--color-canvas)'}}>
-            <div className="showcase-canvas-edge-fade flex items-center justify-center" style={{flex: '1', padding: 'clamp(32px, 4vw, 52px) clamp(24px, 3vw, 40px)', minHeight: '300px', overflow: 'hidden'}}>
-              <div style={{width: '100%', maxWidth: '330px'}}>
-                <div style={{border: '1px solid var(--color-border)', borderRadius: 'var(--radius-sm)', background: 'var(--color-canvas)', padding: '14px', overflow: 'hidden', boxShadow: '0 16px 38px color-mix(in srgb, var(--shadow-ink) 12%, transparent)', minHeight: '300px'}}>
-                  
-                  {/* Model header */}
-                  <div style={{display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '11px', paddingBottom: '11px', borderBottom: '1px solid var(--color-border)'}}>
-                    <span style={{display: 'flex', alignItems: 'center', gap: '6px', padding: '4px 9px', border: '1px solid var(--color-border)', borderRadius: 'var(--radius-sm)', fontSize: '10.5px', fontWeight: '600', color: 'var(--color-foreground)'}}>
-                      <img src="/logos/claude.svg" alt="" style={{width: '12px', height: '12px', display: 'block'}} />
-                      OpenSpace Assistant
-                      <span style={{color: 'var(--color-foreground-muted)'}}>▾</span>
-                    </span>
-                    <span style={{fontSize: '9.5px', padding: '2px 6px', borderRadius: '3px', background: 'rgba(22, 163, 74, 0.12)', color: 'var(--color-badge-new)', fontWeight: 'bold'}}>
-                      ● Context Active
-                    </span>
-                  </div>
-
-                  {/* Chat exchanges */}
-                  <div style={{display: 'flex', flexDirection: 'column', gap: '7px'}}>
-                    <div style={{display: 'flex', justifyContent: 'flex-end'}}>
-                      <span style={{maxWidth: '85%', fontSize: '11.5px', lineHeight: '1.4', padding: '7px 10px', borderRadius: 'var(--radius-sm)', background: 'var(--color-foreground)', color: 'var(--color-foreground-on-primary)', border: 'none'}}>
-                        Prepare a project brief from our meeting notes and customer research.
-                      </span>
-                    </div>
-                    <div style={{display: 'flex', justifyContent: 'flex-start'}}>
-                      <span style={{maxWidth: '88%', fontSize: '11.5px', lineHeight: '1.4', padding: '7px 10px', borderRadius: 'var(--radius-sm)', background: 'var(--color-canvas-soft)', color: 'var(--color-foreground)', border: '1px solid var(--color-border)'}}>
-                        Drafted project brief: 3 deliverables identified, key risks summarized, and next steps prioritized for sprint planning.
-                      </span>
-                    </div>
-
-                    <div style={{display: 'flex', alignItems: 'center', gap: '6px', paddingLeft: '2px', marginTop: '2px'}}>
-                      <span style={{fontFamily: 'var(--font-mono)', fontSize: '8.5px', letterSpacing: '0.5px', textTransform: 'uppercase', color: 'var(--color-foreground-muted)'}}>SOURCES</span>
-                      <span style={{fontFamily: 'var(--font-mono)', fontSize: '9px', color: 'var(--color-foreground-muted)', padding: '2px 7px', border: '1px solid var(--color-border)', borderRadius: '999px'}}>meeting-notes.md</span>
-                      <span style={{fontFamily: 'var(--font-mono)', fontSize: '9px', color: 'var(--color-foreground-muted)', padding: '2px 7px', border: '1px solid var(--color-border)', borderRadius: '999px'}}>interviews.pdf</span>
-                    </div>
-
-                    <div style={{marginTop: '3px', height: '32px', borderRadius: 'var(--radius-sm)', border: '1px solid var(--color-border-soft)', display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '0 4px 0 10px', fontSize: '11px', color: 'var(--color-foreground-tertiary)'}}>
-                      Ask the agent to research or draft…
-                      <span style={{width: '24px', height: '24px', borderRadius: 'var(--radius-sm)', background: 'var(--color-foreground)', color: 'var(--color-foreground-on-primary)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '12px'}}>
-                        ↑
-                      </span>
-                    </div>
-                  </div>
-
-                </div>
+            <div className="showcase-canvas-edge-fade flex items-center justify-center" style={{flex: '1', padding: 'clamp(24px, 3vw, 40px) clamp(16px, 2vw, 28px)', minHeight: '368px', overflow: 'hidden'}}>
+              <div style={{width: '100%', maxWidth: '510px', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+                <img
+                  src={collectionsGridImg}
+                  alt="Dark collections dashboard grid"
+                  style={{
+                    maxWidth: '100%',
+                    maxHeight: '322px',
+                    width: 'auto',
+                    height: 'auto',
+                    objectFit: 'contain',
+                    display: 'block',
+                    filter: 'drop-shadow(0 18px 36px color-mix(in srgb, var(--shadow-ink) 22%, transparent))',
+                    transition: 'transform 0.4s cubic-bezier(0.16, 1, 0.3, 1)',
+                    transformOrigin: 'center'
+                  }}
+                  className="hover:scale-[1.03]"
+                />
               </div>
             </div>
 
@@ -82,58 +58,24 @@ export default function AgentSpotlight() {
 
           {/* Card 2: For AI power users - Give Claude and ChatGPT the context they're missing */}
           <div className="flex flex-col" style={{background: 'var(--color-canvas)'}}>
-            <div className="showcase-canvas-edge-fade flex items-center justify-center" style={{flex: '1', padding: 'clamp(32px, 4vw, 52px) clamp(24px, 3vw, 40px)', minHeight: '300px', overflow: 'hidden'}}>
-              <div style={{width: '100%', maxWidth: '330px'}}>
-                <div style={{border: '1px solid var(--color-border)', borderRadius: 'var(--radius-sm)', background: 'var(--color-canvas)', padding: '14px', overflow: 'hidden', boxShadow: '0 16px 38px color-mix(in srgb, var(--shadow-ink) 12%, transparent)', minHeight: '300px'}}>
-                  
-                  {/* Search / MCP Header */}
-                  <div style={{height: '30px', borderRadius: 'var(--radius-sm)', border: '1px solid var(--color-border-soft)', display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '0 8px 0 10px', fontSize: '11px', color: 'var(--color-foreground-tertiary)', marginBottom: '10px'}}>
-                    <span style={{display: 'flex', alignItems: 'center', gap: '6px'}}>
-                      <span style={{color: 'var(--color-accent)', fontWeight: 'bold'}}>⚡</span>
-                      MCP Context Server
-                    </span>
-                    <span style={{fontFamily: 'var(--font-mono)', fontSize: '9px', color: 'var(--color-foreground-muted)', padding: '2px 6px', border: '1px solid var(--color-border)', borderRadius: 'var(--radius-sm)'}}>
-                      v1.0
-                    </span>
-                  </div>
-
-                  <div style={{fontFamily: 'var(--font-mono)', fontSize: '8.5px', letterSpacing: '0.5px', textTransform: 'uppercase', color: 'var(--color-foreground-muted)', marginBottom: '7px'}}>
-                    LIVE CONTEXT INJECTION
-                  </div>
-
-                  <div style={{display: 'flex', flexDirection: 'column', gap: '7px'}}>
-                    <div style={{padding: '8px 10px', border: '1px solid var(--color-border)', borderRadius: 'var(--radius-sm)', background: 'var(--color-canvas-soft)'}}>
-                      <div style={{display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '3px'}}>
-                        <span style={{fontSize: '11px', fontWeight: '600', color: 'var(--color-foreground)'}}>Q4 Product Architecture Spec</span>
-                        <span style={{fontFamily: 'var(--font-mono)', fontSize: '9.5px', color: 'var(--color-badge-new)', fontWeight: 'bold'}}>Claude</span>
-                      </div>
-                      <div style={{fontSize: '10px', color: 'var(--color-foreground-muted)', lineHeight: '1.4'}}>
-                        98% relevance • 4 technical diagrams injected
-                      </div>
-                    </div>
-
-                    <div style={{padding: '8px 10px', border: '1px solid var(--color-border)', borderRadius: 'var(--radius-sm)', background: 'var(--color-canvas-soft)'}}>
-                      <div style={{display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '3px'}}>
-                        <span style={{fontSize: '11px', fontWeight: '600', color: 'var(--color-foreground)'}}>Customer Interview Synthesis</span>
-                        <span style={{fontFamily: 'var(--font-mono)', fontSize: '9.5px', color: 'var(--color-badge-new)', fontWeight: 'bold'}}>ChatGPT</span>
-                      </div>
-                      <div style={{fontSize: '10px', color: 'var(--color-foreground-muted)', lineHeight: '1.4'}}>
-                        92% relevance • Transcripts &amp; pain points
-                      </div>
-                    </div>
-
-                    <div style={{padding: '8px 10px', border: '1px solid var(--color-border)', borderRadius: 'var(--radius-sm)', background: 'var(--color-canvas-soft)'}}>
-                      <div style={{display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '3px'}}>
-                        <span style={{fontSize: '11px', fontWeight: '600', color: 'var(--color-foreground)'}}>Voice Memo: Roadmap Decisions</span>
-                        <span style={{fontFamily: 'var(--font-mono)', fontSize: '9.5px', color: 'var(--color-badge-new)', fontWeight: 'bold'}}>Antigravity</span>
-                      </div>
-                      <div style={{fontSize: '10px', color: 'var(--color-foreground-muted)', lineHeight: '1.4'}}>
-                        88% relevance • Audio key decisions extracted
-                      </div>
-                    </div>
-                  </div>
-
-                </div>
+            <div className="showcase-canvas-edge-fade flex items-center justify-center" style={{flex: '1', padding: 'clamp(24px, 3vw, 40px) clamp(16px, 2vw, 28px)', minHeight: '368px', overflow: 'hidden'}}>
+              <div style={{width: '100%', maxWidth: '510px', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+                <img
+                  src={claudeInterfaceImg}
+                  alt="Claude dark mode OpenSpace interface"
+                  style={{
+                    maxWidth: '100%',
+                    maxHeight: '322px',
+                    width: 'auto',
+                    height: 'auto',
+                    objectFit: 'contain',
+                    display: 'block',
+                    filter: 'drop-shadow(0 18px 36px color-mix(in srgb, var(--shadow-ink) 22%, transparent))',
+                    transition: 'transform 0.4s cubic-bezier(0.16, 1, 0.3, 1)',
+                    transformOrigin: 'center'
+                  }}
+                  className="hover:scale-[1.03]"
+                />
               </div>
             </div>
 
