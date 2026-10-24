@@ -1,4 +1,9 @@
 import React from 'react';
+import deviceMockupImg from '../assets/device-mockup.png';
+import todoTasksWidgetImg from '../assets/todo-tasks-widget.png';
+import collectionsGridImg from '../assets/collections-dashboard-grid.png';
+import minecraftDashboardImg from '../assets/minecraft-build-ideas.png';
+import claudeInterfaceImg from '../assets/claude-interface.png';
 
 export default function FeaturesBento() {
   return (
@@ -33,60 +38,47 @@ export default function FeaturesBento() {
                 </p>
               </div>
 
-              <div className="showcase-canvas-edge-fade" style={{marginTop: '20px', height: '290px', overflow: 'hidden', display: 'flex', alignItems: 'flex-start', justifyContent: 'center', padding: '10px 26px 0'}}>
-                <div style={{width: '100%', maxWidth: '440px'}}>
-                  <div style={{border: '1px solid var(--color-border)', borderRadius: 'var(--radius-sm)', background: 'var(--color-canvas)', padding: '14px', overflow: 'hidden', boxShadow: '0 16px 38px color-mix(in srgb, var(--shadow-ink) 12%, transparent)', minHeight: '300px'}}>
-                    
-                    {/* Model Switcher Bar */}
-                    <div style={{display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '11px', paddingBottom: '11px', borderBottom: '1px solid var(--color-border)'}}>
-                      <span style={{display: 'flex', alignItems: 'center', gap: '6px', padding: '4px 9px', border: '1px solid var(--color-border)', borderRadius: 'var(--radius-sm)', fontSize: '10.5px', fontWeight: '600', color: 'var(--color-foreground)'}}>
-                        <img src="/logos/services/anthropic.svg" alt="" style={{width: '12px', height: '12px', display: 'block', filter: 'grayscale(1)'}} />
-                        Claude 3.5 Sonnet
-                        <span style={{color: 'var(--color-foreground-muted)'}}>▾</span>
-                      </span>
-                      <span style={{display: 'flex', alignItems: 'center', gap: '6px'}}>
-                        <img src="/logos/services/openai.svg" alt="ChatGPT" title="ChatGPT" style={{width: '13px', height: '13px', display: 'block', opacity: '0.6', filter: 'grayscale(1)'}} />
-                        <img src="/logos/services/anthropic.svg" alt="Claude" title="Claude" style={{width: '13px', height: '13px', display: 'block', opacity: '0.6', filter: 'grayscale(1)'}} />
-                        <img src="/logos/services/gemini.svg" alt="Gemini" title="Gemini" style={{width: '13px', height: '13px', display: 'block', opacity: '0.6', filter: 'grayscale(1)'}} />
-                      </span>
-                    </div>
-
-                    {/* Context Bridge Strip */}
-                    <div style={{display: 'flex', alignItems: 'center', gap: '6px', padding: '5px 8px', borderRadius: '4px', background: 'var(--color-canvas-soft)', border: '1px solid var(--color-border)', marginBottom: '10px', fontSize: '10px', color: 'var(--color-foreground-muted)'}}>
-                      <span style={{color: 'var(--color-accent)', fontWeight: 'bold'}}>⚡ OpenSpace Context:</span>
-                      <span>4 notes, 2 screenshots, 1 audio memo injected</span>
-                    </div>
-
-                    {/* Chat Exchanges */}
-                    <div style={{display: 'flex', flexDirection: 'column', gap: '7px'}}>
-                      <div style={{display: 'flex', justifyContent: 'flex-end'}}>
-                        <span style={{maxWidth: '85%', fontSize: '11.5px', lineHeight: '1.4', padding: '7px 10px', borderRadius: 'var(--radius-sm)', background: 'var(--color-foreground)', color: 'var(--color-foreground-on-primary)', border: 'none'}}>
-                          What were the key decisions from my architecture brainstorm?
-                        </span>
-                      </div>
-                      <div style={{display: 'flex', justifyContent: 'flex-start'}}>
-                        <span style={{maxWidth: '88%', fontSize: '11.5px', lineHeight: '1.4', padding: '7px 10px', borderRadius: 'var(--radius-sm)', background: 'var(--color-canvas-soft)', color: 'var(--color-foreground)', border: '1px solid var(--color-border)'}}>
-                          Based on your voice memo from 2 PM and yesterday's whiteboard capture: you decided on local-first storage with an MCP context bridge.
-                        </span>
-                      </div>
-                      
-                      {/* Attached Knowledge Sources */}
-                      <div style={{display: 'flex', alignItems: 'center', gap: '6px', paddingLeft: '2px', marginTop: '2px'}}>
-                        <span style={{fontFamily: 'var(--font-mono)', fontSize: '8.5px', letterSpacing: '0.5px', textTransform: 'uppercase', color: 'var(--color-foreground-muted)'}}>SOURCES</span>
-                        <span style={{fontFamily: 'var(--font-mono)', fontSize: '9px', color: 'var(--color-foreground-muted)', padding: '2px 7px', border: '1px solid var(--color-border)', borderRadius: '999px'}}>voice-oct22.m4a</span>
-                        <span style={{fontFamily: 'var(--font-mono)', fontSize: '9px', color: 'var(--color-foreground-muted)', padding: '2px 7px', border: '1px solid var(--color-border)', borderRadius: '999px'}}>architecture.png</span>
-                      </div>
-
-                      {/* Prompt Bar */}
-                      <div style={{marginTop: '4px', height: '32px', borderRadius: 'var(--radius-sm)', border: '1px solid var(--color-border-soft)', display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '0 4px 0 10px', fontSize: '11px', color: 'var(--color-foreground-tertiary)'}}>
-                        Ask Claude, ChatGPT, or your workspace…
-                        <span style={{width: '24px', height: '24px', borderRadius: 'var(--radius-sm)', background: 'var(--color-foreground)', color: 'var(--color-foreground-on-primary)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '12px'}}>
-                          ↑
-                        </span>
-                      </div>
-                    </div>
-
-                  </div>
+              <div
+                className="showcase-canvas-edge-fade"
+                style={{
+                  marginTop: '20px',
+                  height: '290px',
+                  overflow: 'hidden',
+                  display: 'flex',
+                  alignItems: 'flex-end',
+                  justifyContent: 'center',
+                  padding: '10px 20px 0',
+                  position: 'relative'
+                }}
+              >
+                <div
+                  style={{
+                    width: '100%',
+                    maxWidth: '460px',
+                    height: '100%',
+                    display: 'flex',
+                    alignItems: 'flex-end',
+                    justifyContent: 'center',
+                    position: 'relative'
+                  }}
+                >
+                  <img
+                    src={claudeInterfaceImg}
+                    alt="Claude dark mode OpenSpace context integration interface"
+                    style={{
+                      maxWidth: '100%',
+                      maxHeight: '100%',
+                      width: 'auto',
+                      height: 'auto',
+                      objectFit: 'contain',
+                      objectPosition: 'bottom center',
+                      display: 'block',
+                      filter: 'drop-shadow(0 18px 36px color-mix(in srgb, var(--shadow-ink) 24%, transparent))',
+                      transition: 'transform 0.4s cubic-bezier(0.16, 1, 0.3, 1)',
+                      transformOrigin: 'bottom center'
+                    }}
+                    className="hover:scale-[1.03]"
+                  />
                 </div>
               </div>
             </div>
@@ -102,71 +94,47 @@ export default function FeaturesBento() {
                 </p>
               </div>
 
-              <div className="showcase-canvas-edge-fade" style={{marginTop: '20px', height: '290px', overflow: 'hidden', display: 'flex', alignItems: 'flex-start', justifyContent: 'center', padding: '10px 26px 0'}}>
-                <div style={{width: '100%', maxWidth: '440px'}}>
-                  <div style={{border: '1px solid var(--color-border)', borderRadius: 'var(--radius-sm)', background: 'var(--color-canvas)', padding: '14px', overflow: 'hidden', boxShadow: '0 16px 38px color-mix(in srgb, var(--shadow-ink) 12%, transparent)'}}>
-                    
-                    {/* Device Surfaces Bar */}
-                    <div style={{display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '8px', marginBottom: '14px'}}>
-                      <div style={{border: '1px solid var(--color-border)', borderRadius: 'var(--radius-sm)', padding: '9px', textAlign: 'center'}}>
-                        <div style={{fontSize: '16px'}}>🖥️</div>
-                        <div style={{fontFamily: 'var(--font-mono)', fontSize: '9px', letterSpacing: '0.5px', textTransform: 'uppercase', color: 'var(--color-foreground)', marginTop: '4px', fontWeight: '600'}}>Desktop App</div>
-                        <div style={{fontFamily: 'var(--font-mono)', fontSize: '8.5px', color: 'var(--color-foreground-muted)'}}>Hotkeys &amp; Snips</div>
-                      </div>
-                      <div style={{border: '1px solid var(--color-border)', borderRadius: 'var(--radius-sm)', padding: '9px', textAlign: 'center'}}>
-                        <div style={{fontSize: '16px'}}>🌐</div>
-                        <div style={{fontFamily: 'var(--font-mono)', fontSize: '9px', letterSpacing: '0.5px', textTransform: 'uppercase', color: 'var(--color-foreground)', marginTop: '4px', fontWeight: '600'}}>Browser Ext</div>
-                        <div style={{fontFamily: 'var(--font-mono)', fontSize: '8.5px', color: 'var(--color-foreground-muted)'}}>1-Click Save</div>
-                      </div>
-                      <div style={{border: '1px solid var(--color-border)', borderRadius: 'var(--radius-sm)', padding: '9px', textAlign: 'center'}}>
-                        <div style={{fontSize: '16px'}}>📱</div>
-                        <div style={{fontFamily: 'var(--font-mono)', fontSize: '9px', letterSpacing: '0.5px', textTransform: 'uppercase', color: 'var(--color-foreground)', marginTop: '4px', fontWeight: '600'}}>Phone App</div>
-                        <div style={{fontFamily: 'var(--font-mono)', fontSize: '8.5px', color: 'var(--color-foreground-muted)'}}>Voice &amp; Photos</div>
-                      </div>
-                    </div>
-
-                    {/* Live Capture Feed Mockup */}
-                    <div style={{display: 'flex', alignItems: 'baseline', justifyContent: 'space-between', marginBottom: '8px'}}>
-                      <span style={{fontSize: '11px', fontWeight: '600', color: 'var(--color-foreground)'}}>Recent Captures</span>
-                      <span style={{fontFamily: 'var(--font-mono)', fontSize: '8.5px', letterSpacing: '0.5px', textTransform: 'uppercase', color: 'var(--color-foreground-muted)'}}>SYNCED ACROSS ALL DEVICES</span>
-                    </div>
-
-                    <div style={{display: 'flex', flexDirection: 'column', gap: '8px'}}>
-                      <div style={{display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '7px 9px', borderRadius: '4px', border: '1px solid var(--color-border)', background: 'var(--color-canvas-soft)'}}>
-                        <div style={{display: 'flex', alignItems: 'center', gap: '8px'}}>
-                          <span style={{fontSize: '12px'}}>📸</span>
-                          <div>
-                            <div style={{fontSize: '11px', fontWeight: '600', color: 'var(--color-foreground)'}}>API Architecture Figma Frame</div>
-                            <div style={{fontSize: '9.5px', color: 'var(--color-foreground-muted)'}}>🖥️ PC Desktop • Screenshot</div>
-                          </div>
-                        </div>
-                        <span style={{fontFamily: 'var(--font-mono)', fontSize: '9px', color: 'var(--color-foreground-muted)'}}>Just now</span>
-                      </div>
-
-                      <div style={{display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '7px 9px', borderRadius: '4px', border: '1px solid var(--color-border)', background: 'var(--color-canvas-soft)'}}>
-                        <div style={{display: 'flex', alignItems: 'center', gap: '8px'}}>
-                          <span style={{fontSize: '12px'}}>🎙️</span>
-                          <div>
-                            <div style={{fontSize: '11px', fontWeight: '600', color: 'var(--color-foreground)'}}>Voice Memo: Q4 Product Strategy</div>
-                            <div style={{fontSize: '9.5px', color: 'var(--color-foreground-muted)'}}>📱 Mobile App • Transcribed</div>
-                          </div>
-                        </div>
-                        <span style={{fontFamily: 'var(--font-mono)', fontSize: '9px', color: 'var(--color-foreground-muted)'}}>12m ago</span>
-                      </div>
-
-                      <div style={{display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '7px 9px', borderRadius: '4px', border: '1px solid var(--color-border)', background: 'var(--color-canvas-soft)'}}>
-                        <div style={{display: 'flex', alignItems: 'center', gap: '8px'}}>
-                          <span style={{fontSize: '12px'}}>🔗</span>
-                          <div>
-                            <div style={{fontSize: '11px', fontWeight: '600', color: 'var(--color-foreground)'}}>Model Context Protocol Specification</div>
-                            <div style={{fontSize: '9.5px', color: 'var(--color-foreground-muted)'}}>🌐 Chrome • Full-page article</div>
-                          </div>
-                        </div>
-                        <span style={{fontFamily: 'var(--font-mono)', fontSize: '9px', color: 'var(--color-foreground-muted)'}}>1h ago</span>
-                      </div>
-                    </div>
-
-                  </div>
+              <div
+                className="showcase-canvas-edge-fade"
+                style={{
+                  marginTop: '20px',
+                  height: '290px',
+                  overflow: 'hidden',
+                  display: 'flex',
+                  alignItems: 'flex-end',
+                  justifyContent: 'center',
+                  padding: '10px 20px 0',
+                  position: 'relative'
+                }}
+              >
+                <div
+                  style={{
+                    width: '100%',
+                    maxWidth: '460px',
+                    height: '100%',
+                    display: 'flex',
+                    alignItems: 'flex-end',
+                    justifyContent: 'center',
+                    position: 'relative'
+                  }}
+                >
+                  <img
+                    src={deviceMockupImg}
+                    alt="Open Space running across tablet, laptop, and phone in dark mode"
+                    style={{
+                      maxWidth: '100%',
+                      maxHeight: '100%',
+                      width: 'auto',
+                      height: 'auto',
+                      objectFit: 'contain',
+                      objectPosition: 'bottom center',
+                      display: 'block',
+                      filter: 'drop-shadow(0 18px 36px color-mix(in srgb, var(--shadow-ink) 24%, transparent))',
+                      transition: 'transform 0.4s cubic-bezier(0.16, 1, 0.3, 1)',
+                      transformOrigin: 'bottom center'
+                    }}
+                    className="hover:scale-[1.03]"
+                  />
                 </div>
               </div>
             </div>
@@ -187,46 +155,46 @@ export default function FeaturesBento() {
                 </p>
               </div>
 
-              <div className="showcase-canvas-edge-fade" style={{marginTop: '20px', height: '220px', overflow: 'hidden', display: 'flex', alignItems: 'flex-start', justifyContent: 'center', padding: '10px 26px 0'}}>
-                <div style={{width: '100%', maxWidth: '300px'}}>
-                  <div style={{border: '1px solid var(--color-border)', borderRadius: 'var(--radius-sm)', background: 'var(--color-canvas)', padding: '14px', overflow: 'hidden', boxShadow: '0 16px 38px color-mix(in srgb, var(--shadow-ink) 12%, transparent)', minHeight: '300px'}}>
-                    
-                    <div style={{display: 'flex', alignItems: 'center', justifyContent: 'space-between', paddingBottom: '9px', borderBottom: '1px solid var(--color-border)', marginBottom: '10px'}}>
-                      <span style={{fontFamily: 'var(--font-mono)', fontSize: '9px', textTransform: 'uppercase', color: 'var(--color-accent)', fontWeight: '600'}}>
-                        AI ACTION PLAN
-                      </span>
-                      <span style={{fontSize: '9px', padding: '1px 5px', borderRadius: '3px', background: 'rgba(22, 163, 74, 0.12)', color: 'var(--color-badge-new)', fontWeight: 'bold'}}>
-                        ✓ Generated
-                      </span>
-                    </div>
-
-                    <div style={{display: 'flex', flexDirection: 'column', gap: '7px'}}>
-                      <div style={{padding: '8px 10px', border: '1px solid var(--color-border)', borderRadius: 'var(--radius-sm)', background: 'var(--color-canvas-soft)'}}>
-                        <div style={{display: 'flex', alignItems: 'center', gap: '6px', marginBottom: '3px'}}>
-                          <span style={{color: 'var(--color-badge-new)', fontSize: '11px'}}>✓</span>
-                          <span style={{fontSize: '11px', fontWeight: '600', color: 'var(--color-foreground)'}}>Finalize MCP Server Spec</span>
-                        </div>
-                        <div style={{fontSize: '9.5px', color: 'var(--color-foreground-muted)'}}>Extracted from voice memo • High priority</div>
-                      </div>
-
-                      <div style={{padding: '8px 10px', border: '1px solid var(--color-border)', borderRadius: 'var(--radius-sm)', background: 'var(--color-canvas-soft)'}}>
-                        <div style={{display: 'flex', alignItems: 'center', gap: '6px', marginBottom: '3px'}}>
-                          <span style={{color: 'var(--color-badge-new)', fontSize: '11px'}}>✓</span>
-                          <span style={{fontSize: '11px', fontWeight: '600', color: 'var(--color-foreground)'}}>Draft Launch Announcement</span>
-                        </div>
-                        <div style={{fontSize: '9.5px', color: 'var(--color-foreground-muted)'}}>Synthesized from 3 research notes</div>
-                      </div>
-
-                      <div style={{padding: '8px 10px', border: '1px solid var(--color-border)', borderRadius: 'var(--radius-sm)', background: 'var(--color-canvas-soft)'}}>
-                        <div style={{display: 'flex', alignItems: 'center', gap: '6px', marginBottom: '3px'}}>
-                          <span style={{color: 'var(--color-badge-new)', fontSize: '11px'}}>✓</span>
-                          <span style={{fontSize: '11px', fontWeight: '600', color: 'var(--color-foreground)'}}>Review Android &amp; Chrome Sync</span>
-                        </div>
-                        <div style={{fontSize: '9.5px', color: 'var(--color-foreground-muted)'}}>Auto-assigned from roadmap screenshot</div>
-                      </div>
-                    </div>
-
-                  </div>
+              <div
+                className="showcase-canvas-edge-fade"
+                style={{
+                  marginTop: '14px',
+                  height: '245px',
+                  overflow: 'hidden',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  padding: '4px 16px',
+                  position: 'relative'
+                }}
+              >
+                <div
+                  style={{
+                    width: '100%',
+                    maxWidth: '380px',
+                    height: '100%',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    position: 'relative'
+                  }}
+                >
+                  <img
+                    src={todoTasksWidgetImg}
+                    alt="Dark to-do tasks widget showing active and completed tasks"
+                    style={{
+                      maxWidth: '100%',
+                      maxHeight: '100%',
+                      width: 'auto',
+                      height: 'auto',
+                      objectFit: 'contain',
+                      display: 'block',
+                      filter: 'drop-shadow(0 14px 28px color-mix(in srgb, var(--shadow-ink) 20%, transparent))',
+                      transition: 'transform 0.4s cubic-bezier(0.16, 1, 0.3, 1)',
+                      transformOrigin: 'center'
+                    }}
+                    className="hover:scale-[1.03]"
+                  />
                 </div>
               </div>
             </div>
@@ -242,52 +210,46 @@ export default function FeaturesBento() {
                 </p>
               </div>
 
-              <div className="showcase-canvas-edge-fade" style={{marginTop: '20px', height: '220px', overflow: 'hidden', display: 'flex', alignItems: 'flex-start', justifyContent: 'center', padding: '10px 26px 0'}}>
-                <div style={{width: '100%', maxWidth: '300px'}}>
-                  <div style={{width: '100%', height: '352px', display: 'flex', borderRadius: 'var(--radius-sm)', border: '1px solid var(--color-border)', overflow: 'hidden', background: 'var(--color-canvas)', boxShadow: '0 18px 44px color-mix(in srgb, var(--shadow-ink) 13%, transparent)'}}>
-                    
-                    {/* Navigation Sidebar */}
-                    <div style={{width: '130px', flexShrink: '0', background: 'var(--color-canvas-soft)', borderRight: '1px solid var(--color-border)', padding: '12px 10px', display: 'flex', flexDirection: 'column', gap: '5px'}}>
-                      <div style={{fontSize: '11px', fontWeight: '700', color: 'var(--color-foreground)', marginBottom: '4px'}}>
-                        Clusters
-                      </div>
-                      <div style={{padding: '4px 6px', borderRadius: '4px', background: 'var(--color-accent-soft)', fontSize: '10px', fontWeight: '600', color: 'var(--color-foreground)'}}>
-                        AI Workflows
-                      </div>
-                      <div style={{padding: '4px 6px', borderRadius: '4px', fontSize: '10px', color: 'var(--color-foreground-muted)'}}>
-                        Architecture
-                      </div>
-                      <div style={{padding: '4px 6px', borderRadius: '4px', fontSize: '10px', color: 'var(--color-foreground-muted)'}}>
-                        Personal Notes
-                      </div>
-                      <div style={{padding: '4px 6px', borderRadius: '4px', fontSize: '10px', color: 'var(--color-foreground-muted)'}}>
-                        Roadmap
-                      </div>
-                    </div>
-
-                    {/* Main Connected Graph Surface */}
-                    <div style={{flex: '1', minWidth: '0', padding: '16px', display: 'flex', flexDirection: 'column', gap: '8px'}}>
-                      <div style={{fontSize: '13px', fontWeight: '700', color: 'var(--color-foreground)'}}>
-                        AI Workflows
-                      </div>
-                      <div style={{fontSize: '10px', color: 'var(--color-foreground-muted)', lineHeight: '1.4'}}>
-                        4 connected items found across notes, voice, and bookmarks:
-                      </div>
-
-                      <div style={{display: 'flex', flexDirection: 'column', gap: '5px', marginTop: '4px'}}>
-                        <div style={{padding: '6px 8px', borderRadius: '4px', border: '1px solid var(--color-border)', background: 'var(--color-canvas-soft)', fontSize: '9.5px'}}>
-                          <span style={{color: 'var(--color-accent)', fontWeight: 'bold'}}>🔗 Voice memo</span> linked to <span style={{fontWeight: '600'}}>MCP doc</span>
-                        </div>
-                        <div style={{padding: '6px 8px', borderRadius: '4px', border: '1px solid var(--color-border)', background: 'var(--color-canvas-soft)', fontSize: '9.5px'}}>
-                          <span style={{color: 'var(--color-accent)', fontWeight: 'bold'}}>🔗 Figma snip</span> linked to <span style={{fontWeight: '600'}}>Launch plan</span>
-                        </div>
-                        <div style={{padding: '6px 8px', borderRadius: '4px', border: '1px solid var(--color-border)', background: 'var(--color-canvas-soft)', fontSize: '9.5px'}}>
-                          <span style={{color: 'var(--color-accent)', fontWeight: 'bold'}}>🔗 2 Web links</span> grouped into <span style={{fontWeight: '600'}}>Research</span>
-                        </div>
-                      </div>
-                    </div>
-
-                  </div>
+              <div
+                className="showcase-canvas-edge-fade"
+                style={{
+                  marginTop: '14px',
+                  height: '245px',
+                  overflow: 'hidden',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  padding: '4px 16px',
+                  position: 'relative'
+                }}
+              >
+                <div
+                  style={{
+                    width: '100%',
+                    maxWidth: '380px',
+                    height: '100%',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    position: 'relative'
+                  }}
+                >
+                  <img
+                    src={minecraftDashboardImg}
+                    alt="Minecraft Build Ideas Dashboard showing collection summary, notes, checklist, and captures"
+                    style={{
+                      maxWidth: '100%',
+                      maxHeight: '100%',
+                      width: 'auto',
+                      height: 'auto',
+                      objectFit: 'contain',
+                      display: 'block',
+                      filter: 'drop-shadow(0 14px 28px color-mix(in srgb, var(--shadow-ink) 20%, transparent))',
+                      transition: 'transform 0.4s cubic-bezier(0.16, 1, 0.3, 1)',
+                      transformOrigin: 'center'
+                    }}
+                    className="hover:scale-[1.03]"
+                  />
                 </div>
               </div>
             </div>
@@ -303,47 +265,47 @@ export default function FeaturesBento() {
                 </p>
               </div>
 
-              <div className="showcase-canvas-edge-fade" style={{marginTop: '20px', height: '220px', overflow: 'hidden', display: 'flex', alignItems: 'flex-start', justifyContent: 'center', padding: '10px 26px 0'}}>
-                <div style={{width: '100%', maxWidth: '300px'}}>
-                  <div style={{border: '1px solid var(--color-border)', borderRadius: 'var(--radius-sm)', background: 'var(--color-canvas)', padding: '14px', overflow: 'hidden', boxShadow: '0 16px 38px color-mix(in srgb, var(--shadow-ink) 12%, transparent)', display: 'flex', flexDirection: 'column'}}>
-                    
-                    <div style={{fontSize: '11px', fontWeight: '600', color: 'var(--color-foreground)', marginBottom: '8px'}}>
-                      Unified Knowledge Hub
-                    </div>
-
-                    <div style={{display: 'flex', flexDirection: 'column', gap: '8px'}}>
-                      <div style={{display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '7px 9px', borderRadius: '4px', border: '1px solid var(--color-border)', background: 'var(--color-canvas-soft)'}}>
-                        <div style={{display: 'flex', alignItems: 'center', gap: '6px', fontSize: '11px', fontWeight: '600', color: 'var(--color-foreground)'}}>
-                          <span>💼</span> Work &amp; Projects
-                        </div>
-                        <span style={{fontFamily: 'var(--font-mono)', fontSize: '9px', color: 'var(--color-foreground-muted)'}}>48 items</span>
-                      </div>
-
-                      <div style={{display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '7px 9px', borderRadius: '4px', border: '1px solid var(--color-border)', background: 'var(--color-canvas-soft)'}}>
-                        <div style={{display: 'flex', alignItems: 'center', gap: '6px', fontSize: '11px', fontWeight: '600', color: 'var(--color-foreground)'}}>
-                          <span>🔬</span> Research &amp; Articles
-                        </div>
-                        <span style={{fontFamily: 'var(--font-mono)', fontSize: '9px', color: 'var(--color-foreground-muted)'}}>112 items</span>
-                      </div>
-
-                      <div style={{display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '7px 9px', borderRadius: '4px', border: '1px solid var(--color-border)', background: 'var(--color-canvas-soft)'}}>
-                        <div style={{display: 'flex', alignItems: 'center', gap: '6px', fontSize: '11px', fontWeight: '600', color: 'var(--color-foreground)'}}>
-                          <span>🌱</span> Personal &amp; Ideas
-                        </div>
-                        <span style={{fontFamily: 'var(--font-mono)', fontSize: '9px', color: 'var(--color-foreground-muted)'}}>34 items</span>
-                      </div>
-                    </div>
-
-                    <div style={{marginTop: 'auto', paddingTop: '12px', borderTop: '1px solid var(--color-border)', display: 'flex', alignItems: 'center', justifyContent: 'space-between'}}>
-                      <span style={{fontFamily: 'var(--font-mono)', fontSize: '8.5px', color: 'var(--color-foreground-muted)'}}>
-                        SYNC STATUS
-                      </span>
-                      <span style={{fontSize: '9.5px', color: 'var(--color-badge-new)', fontWeight: '600'}}>
-                        ● Synced &amp; Encrypted
-                      </span>
-                    </div>
-
-                  </div>
+              <div
+                className="showcase-canvas-edge-fade"
+                style={{
+                  marginTop: '14px',
+                  height: '245px',
+                  overflow: 'hidden',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  padding: '4px 16px',
+                  position: 'relative'
+                }}
+              >
+                <div
+                  style={{
+                    width: '100%',
+                    maxWidth: '380px',
+                    height: '100%',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    position: 'relative'
+                  }}
+                >
+                  <img
+                    src={collectionsGridImg}
+                    alt="Dark collections dashboard grid showing Work & Ideas, Travel Plans, Personal Notes, and Project References"
+                    style={{
+                      maxWidth: '100%',
+                      maxHeight: '100%',
+                      width: 'auto',
+                      height: 'auto',
+                      transform: 'scale(1.2)',
+                      objectFit: 'contain',
+                      display: 'block',
+                      filter: 'drop-shadow(0 14px 28px color-mix(in srgb, var(--shadow-ink) 20%, transparent))',
+                      transition: 'transform 0.4s cubic-bezier(0.16, 1, 0.3, 1)',
+                      transformOrigin: 'center'
+                    }}
+                    className="hover:scale-[1.24]"
+                  />
                 </div>
               </div>
             </div>
