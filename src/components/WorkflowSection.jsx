@@ -1,4 +1,8 @@
 import React, { useState } from 'react';
+import minecraftDashboardImg from '../assets/minecraft-build-ideas.png';
+import claudeInterfaceImg from '../assets/claude-interface.png';
+import todoTasksWidgetImg from '../assets/todo-tasks-widget.png';
+import collectionsGridImg from '../assets/collections-dashboard-grid.png';
 
 const WORKFLOW_TABS = [
   {
@@ -176,252 +180,94 @@ export default function WorkflowSection() {
                   borderRadius: 'var(--radius-sm)'
                 }}
               >
-                <div style={{flex: '1', width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
-                  <div style={{width: '100%', maxWidth: '470px', height: '370px', position: 'relative'}}>
+                <div style={{flex: '1', width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', overflow: 'hidden'}}>
+                  <div style={{width: '100%', maxWidth: '500px', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', position: 'relative'}}>
                     
-                    {/* TAB 0: Research that connects the dots */}
+                    {/* TAB 0: Minecraft Build Ideas */}
                     {activeTab === 0 && (
-                      <div className="w-full h-full relative" style={{animation: 'fadeIn 0.35s ease'}}>
-                        {/* 3 top preview cards */}
-                        <div style={{position: 'absolute', top: '0', left: '0', width: '146px', padding: '10px 12px', borderRadius: 'var(--radius-sm)', border: '1px solid var(--color-border)', background: 'var(--color-canvas)', boxShadow: '0 10px 22px rgba(0,0,0,0.08)'}}>
-                          <div style={{height: '46px', borderRadius: '4px', background: 'linear-gradient(135deg, rgba(82, 85, 90, 0.15) 0%, rgba(82, 85, 90, 0.05) 100%)', border: '1px solid var(--color-border)', marginBottom: '8px', display: 'flex', alignItems: 'flex-end', gap: '3px', padding: '6px 8px'}}>
-                            <div style={{width: '18%', height: '35%', background: 'var(--color-border)', borderRadius: '2px'}}></div>
-                            <div style={{width: '18%', height: '65%', background: 'var(--color-border)', borderRadius: '2px'}}></div>
-                            <div style={{width: '18%', height: '100%', background: 'var(--color-accent)', borderRadius: '2px'}}></div>
-                            <div style={{width: '18%', height: '50%', background: 'var(--color-border)', borderRadius: '2px'}}></div>
-                            <div style={{width: '18%', height: '80%', background: 'var(--color-border)', borderRadius: '2px'}}></div>
-                          </div>
-                          <div style={{fontFamily: 'var(--font-mono)', fontSize: '8px', letterSpacing: '0.04em', textTransform: 'uppercase', color: 'var(--color-accent)', marginBottom: '4px', fontWeight: '600'}}>
-                            WEB ARTICLES · 4
-                          </div>
-                          <div style={{fontSize: '11.5px', fontWeight: '600', lineHeight: '1.25', color: 'var(--color-foreground)'}}>
-                            Agent benchmarks &amp; paper
-                          </div>
-                        </div>
-
-                        <div style={{position: 'absolute', top: '0', left: '154px', width: '146px', padding: '10px 12px', borderRadius: 'var(--radius-sm)', border: '1px solid var(--color-border)', background: 'var(--color-canvas)', boxShadow: '0 10px 22px rgba(0,0,0,0.08)'}}>
-                          <div style={{height: '46px', borderRadius: '4px', background: 'linear-gradient(135deg, rgba(82, 85, 90, 0.15) 0%, rgba(82, 85, 90, 0.05) 100%)', border: '1px solid var(--color-border)', marginBottom: '8px', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '5px'}}>
-                            <span style={{fontSize: '10px', fontFamily: 'var(--font-mono)', padding: '2px 5px', borderRadius: '3px', background: 'var(--color-canvas)', border: '1px solid var(--color-border)', fontWeight: '600'}}>2x</span>
-                            <span style={{fontSize: '10px', color: 'var(--color-accent)'}}>→</span>
-                            <span style={{fontSize: '10px', fontFamily: 'var(--font-mono)', padding: '2px 5px', borderRadius: '3px', background: 'var(--color-primary)', color: 'var(--color-primary-foreground)', fontWeight: '600'}}>OCR</span>
-                          </div>
-                          <div style={{fontFamily: 'var(--font-mono)', fontSize: '8px', letterSpacing: '0.04em', textTransform: 'uppercase', color: 'var(--color-accent)', marginBottom: '4px', fontWeight: '600'}}>
-                            SCREENSHOTS · 2
-                          </div>
-                          <div style={{fontSize: '11.5px', fontWeight: '600', lineHeight: '1.25', color: 'var(--color-foreground)'}}>
-                            Whiteboard architecture
-                          </div>
-                        </div>
-
-                        <div style={{position: 'absolute', top: '0', left: '308px', width: '146px', padding: '10px 12px', borderRadius: 'var(--radius-sm)', border: '1px solid var(--color-border)', background: 'var(--color-canvas)', boxShadow: '0 10px 22px rgba(0,0,0,0.08)'}}>
-                          <div style={{height: '46px', borderRadius: '4px', background: 'linear-gradient(135deg, rgba(82, 85, 90, 0.15) 0%, rgba(82, 85, 90, 0.05) 100%)', border: '1px solid var(--color-border)', marginBottom: '8px', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '4px'}}>
-                            <span style={{fontSize: '14px'}}>🎙️</span>
-                            <span style={{fontSize: '9.5px', fontFamily: 'var(--font-mono)', color: 'var(--color-accent)', fontWeight: '600'}}>Transcribed</span>
-                          </div>
-                          <div style={{fontFamily: 'var(--font-mono)', fontSize: '8px', letterSpacing: '0.04em', textTransform: 'uppercase', color: 'var(--color-accent)', marginBottom: '4px', fontWeight: '600'}}>
-                            VOICE NOTES · 1
-                          </div>
-                          <div style={{fontSize: '11.5px', fontWeight: '600', lineHeight: '1.25', color: 'var(--color-foreground)'}}>
-                            Product roadmap memo
-                          </div>
-                        </div>
-
-                        {/* Foreground Highlight Card */}
-                        <div style={{position: 'absolute', top: '118px', left: '50%', transform: 'translateX(-50%)', zIndex: '4', width: '316px', padding: '18px 20px', borderRadius: 'var(--radius-sm)', border: '1px solid var(--color-border)', background: 'var(--color-canvas)', boxShadow: '0 20px 40px rgba(0,0,0,0.18)'}}>
-                          <div style={{fontFamily: 'var(--font-mono)', fontSize: '10.5px', letterSpacing: '0.06em', textTransform: 'uppercase', color: 'var(--color-accent)', marginBottom: '9px', fontWeight: '600'}}>
-                            AI SYNTHESIS · COMPREHENSIVE BRIEF
-                          </div>
-                          <div style={{fontSize: '19px', fontWeight: '700', lineHeight: '1.2', letterSpacing: '-0.4px', color: 'var(--color-foreground)', marginBottom: '12px'}}>
-                            Connected patterns found across 7 sources
-                          </div>
-                          <div style={{display: 'flex', alignItems: 'center', gap: '9px', marginBottom: '12px'}}>
-                            <span style={{width: '26px', height: '26px', borderRadius: '999px', background: 'var(--color-accent)', color: '#ffffff', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '11px', fontWeight: 'bold'}}>
-                              OS
-                            </span>
-                            <div style={{display: 'flex', flexDirection: 'column'}}>
-                              <span style={{fontSize: '12px', fontWeight: '600', color: 'var(--color-foreground)'}}>OpenSpace Research Agent</span>
-                              <span style={{fontSize: '10px', color: 'var(--color-foreground-muted)'}}>Automated cross-document synthesis</span>
-                            </div>
-                          </div>
-                          <div style={{height: '1px', background: 'var(--color-border)', margin: '0 0 12px'}}></div>
-                          <div style={{display: 'flex', flexDirection: 'column', gap: '6px'}}>
-                            <span style={{height: '6px', width: '100%', borderRadius: '3px', background: 'var(--color-canvas-soft)'}}></span>
-                            <span style={{height: '6px', width: '92%', borderRadius: '3px', background: 'var(--color-canvas-soft)'}}></span>
-                            <span style={{height: '6px', width: '70%', borderRadius: '3px', background: 'var(--color-canvas-soft)'}}></span>
-                          </div>
-                          <div style={{display: 'flex', alignItems: 'center', justifyContent: 'between', marginTop: '14px', paddingTop: '10px', borderTop: '1px solid var(--color-border)'}}>
-                            <span style={{fontFamily: 'var(--font-mono)', fontSize: '11px', letterSpacing: '0.02em', textTransform: 'uppercase', color: 'var(--color-accent)', fontWeight: '600'}}>
-                              Open Synthesized Summary →
-                            </span>
-                            <span style={{marginLeft: 'auto', fontSize: '10px', padding: '2px 6px', borderRadius: '3px', background: 'var(--color-canvas-soft)', border: '1px solid var(--color-border)', color: 'var(--color-foreground-muted)', fontFamily: 'var(--font-mono)'}}>
-                              7 Sources
-                            </span>
-                          </div>
-                        </div>
+                      <div key="tab-0" className="w-full h-full flex items-center justify-center" style={{animation: 'fadeIn 0.35s ease'}}>
+                        <img
+                          src={minecraftDashboardImg}
+                          alt="Minecraft build ideas dashboard"
+                          style={{
+                            maxWidth: '100%',
+                            maxHeight: '380px',
+                            width: 'auto',
+                            height: 'auto',
+                            objectFit: 'contain',
+                            display: 'block',
+                            filter: 'drop-shadow(0 18px 36px color-mix(in srgb, var(--shadow-ink) 22%, transparent))',
+                            transition: 'transform 0.4s cubic-bezier(0.16, 1, 0.3, 1)',
+                            transformOrigin: 'center'
+                          }}
+                          className="hover:scale-[1.03]"
+                        />
                       </div>
                     )}
 
-                    {/* TAB 1: Give your AI the full picture */}
+                    {/* TAB 1: Claude Dark Mode Interface */}
                     {activeTab === 1 && (
-                      <div className="w-full h-full flex flex-col gap-3" style={{animation: 'fadeIn 0.35s ease'}}>
-                        {/* Context connection strip */}
-                        <div style={{display: 'flex', alignItems: 'center', gap: '8px', padding: '9px 12px', background: 'var(--color-canvas-soft)', border: '1px solid var(--color-border)', borderRadius: 'var(--radius-sm)'}}>
-                          <span style={{color: 'var(--color-accent)', fontWeight: 'bold', fontSize: '12px'}}>⚡</span>
-                          <span style={{fontSize: '12px', color: 'var(--color-foreground)', fontWeight: '600', flex: '1'}}>OpenSpace Context Bridge (MCP)</span>
-                          <span style={{fontSize: '10px', padding: '2px 6px', borderRadius: '3px', background: 'rgba(22, 163, 74, 0.12)', color: 'var(--color-badge-new)', fontWeight: 'bold'}}>
-                            ● Active
-                          </span>
-                        </div>
-
-                        {/* Interactive Context Exchange Card */}
-                        <div style={{flex: '1', padding: '16px 18px', borderRadius: 'var(--radius-sm)', border: '1px solid var(--color-border)', background: 'var(--color-canvas)', display: 'flex', flexDirection: 'column', gap: '10px', boxShadow: '0 8px 24px rgba(0,0,0,0.06)'}}>
-                          <div className="flex items-center justify-between">
-                            <span style={{fontFamily: 'var(--font-mono)', fontSize: '10px', letterSpacing: '0.06em', textTransform: 'uppercase', color: 'var(--color-accent)', fontWeight: '600'}}>
-                              CONNECTED TO CLAUDE 3.5 SONNET
-                            </span>
-                            <span style={{fontFamily: 'var(--font-mono)', fontSize: '9.5px', color: 'var(--color-foreground-muted)'}}>
-                              12 docs injected
-                            </span>
-                          </div>
-
-                          <div style={{padding: '8px 10px', borderRadius: '4px', background: 'var(--color-foreground)', color: 'var(--color-foreground-on-primary)', fontSize: '11.5px', alignSelf: 'flex-end', maxWidth: '90%'}}>
-                            What did we decide about the zero-retention data privacy policy?
-                          </div>
-
-                          <div style={{padding: '8px 10px', borderRadius: '4px', background: 'var(--color-canvas-soft)', color: 'var(--color-foreground)', border: '1px solid var(--color-border)', fontSize: '11.5px', alignSelf: 'flex-start', maxWidth: '95%', lineHeight: '1.4'}}>
-                            According to your compliance notes from Oct 22: prompts are never retained or trained on, and all local vaults remain strictly encrypted at rest.
-                          </div>
-
-                          <div style={{marginTop: 'auto', paddingTop: '10px', borderTop: '1px solid var(--color-border)', display: 'flex', justifyContent: 'space-between', alignItems: 'center'}}>
-                            <div style={{display: 'flex', gap: '5px', fontSize: '9px', fontFamily: 'var(--font-mono)'}}>
-                              <span style={{padding: '2px 6px', background: 'var(--color-canvas-soft)', border: '1px solid var(--color-border)', borderRadius: '3px'}}>compliance.md</span>
-                              <span style={{padding: '2px 6px', background: 'var(--color-canvas-soft)', border: '1px solid var(--color-border)', borderRadius: '3px'}}>architecture-spec.md</span>
-                            </div>
-                            <span style={{fontFamily: 'var(--font-mono)', fontSize: '11px', color: 'var(--color-accent)', fontWeight: '600'}}>
-                              Verified Context ✓
-                            </span>
-                          </div>
-                        </div>
-
-                        {/* Compatible tools footer */}
-                        <div className="flex items-center justify-between px-3 py-2 text-xs" style={{background: 'var(--color-canvas)', border: '1px solid var(--color-border)', borderRadius: 'var(--radius-sm)'}}>
-                          <span style={{fontSize: '11px', color: 'var(--color-foreground-muted)'}}>Compatible Assistants:</span>
-                          <span style={{fontSize: '11px', fontWeight: '600', color: 'var(--color-foreground)'}}>Claude • ChatGPT • Antigravity • Gemini</span>
-                        </div>
+                      <div key="tab-1" className="w-full h-full flex items-center justify-center" style={{animation: 'fadeIn 0.35s ease'}}>
+                        <img
+                          src={claudeInterfaceImg}
+                          alt="Claude dark mode OpenSpace interface"
+                          style={{
+                            maxWidth: '100%',
+                            maxHeight: '380px',
+                            width: 'auto',
+                            height: 'auto',
+                            objectFit: 'contain',
+                            display: 'block',
+                            filter: 'drop-shadow(0 18px 36px color-mix(in srgb, var(--shadow-ink) 22%, transparent))',
+                            transition: 'transform 0.4s cubic-bezier(0.16, 1, 0.3, 1)',
+                            transformOrigin: 'center'
+                          }}
+                          className="hover:scale-[1.03]"
+                        />
                       </div>
                     )}
 
-                    {/* TAB 2: Turn thoughts into action */}
+                    {/* TAB 2: Dark To-Do Tasks Widget */}
                     {activeTab === 2 && (
-                      <div className="w-full h-full flex flex-col gap-3" style={{animation: 'fadeIn 0.35s ease'}}>
-                        {/* Audio capture banner */}
-                        <div style={{padding: '12px 14px', borderRadius: 'var(--radius-sm)', border: '1px solid var(--color-border)', background: 'var(--color-canvas)', display: 'flex', alignItems: 'center', gap: '10px', boxShadow: '0 6px 18px rgba(0,0,0,0.06)'}}>
-                          <span style={{width: '28px', height: '28px', borderRadius: '999px', background: 'var(--color-accent)', color: '#ffffff', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '13px'}}>🎙️</span>
-                          <div style={{flex: '1'}}>
-                            <div style={{fontSize: '12px', fontWeight: '600', color: 'var(--color-foreground)'}}>"Let's organize the product launch for next Tuesday"</div>
-                            <div style={{fontSize: '10px', color: 'var(--color-foreground-muted)'}}>Audio memo • Transcribed in 1.2s</div>
-                          </div>
-                          <span style={{fontSize: '9.5px', padding: '2px 6px', borderRadius: '3px', background: 'rgba(22, 163, 74, 0.12)', color: 'var(--color-badge-new)', fontWeight: 'bold'}}>
-                            Converted
-                          </span>
-                        </div>
-
-                        {/* Generated Action Plan */}
-                        <div style={{flex: '1', padding: '14px 16px', borderRadius: 'var(--radius-sm)', border: '1px solid var(--color-border)', background: 'var(--color-canvas)', display: 'flex', flexDirection: 'column', gap: '8px', boxShadow: '0 8px 24px rgba(0,0,0,0.06)'}}>
-                          <div className="flex items-center justify-between">
-                            <span style={{fontFamily: 'var(--font-mono)', fontSize: '10px', textTransform: 'uppercase', color: 'var(--color-accent)', fontWeight: '600'}}>
-                              STRUCTURED NEXT STEPS
-                            </span>
-                            <span style={{fontFamily: 'var(--font-mono)', fontSize: '10px', color: 'var(--color-badge-new)', fontWeight: 'bold'}}>
-                              3 Tasks Created
-                            </span>
-                          </div>
-
-                          <div style={{display: 'flex', flexDirection: 'column', gap: '6px'}}>
-                            <div style={{padding: '7px 9px', borderRadius: '4px', border: '1px solid var(--color-border)', background: 'var(--color-canvas-soft)', display: 'flex', justifyContent: 'space-between', alignItems: 'center'}}>
-                              <span style={{fontSize: '11px', fontWeight: '600', color: 'var(--color-foreground)'}}>☑ Deploy production bundle to CDN</span>
-                              <span style={{fontSize: '9px', color: 'var(--color-accent)', fontWeight: '600'}}>High Priority</span>
-                            </div>
-                            <div style={{padding: '7px 9px', borderRadius: '4px', border: '1px solid var(--color-border)', background: 'var(--color-canvas-soft)', display: 'flex', justifyContent: 'space-between', alignItems: 'center'}}>
-                              <span style={{fontSize: '11px', fontWeight: '600', color: 'var(--color-foreground)'}}>☑ Update documentation &amp; quickstart</span>
-                              <span style={{fontSize: '9px', color: 'var(--color-foreground-muted)'}}>In Progress</span>
-                            </div>
-                            <div style={{padding: '7px 9px', borderRadius: '4px', border: '1px solid var(--color-border)', background: 'var(--color-canvas-soft)', display: 'flex', justifyContent: 'space-between', alignItems: 'center'}}>
-                              <span style={{fontSize: '11px', fontWeight: '600', color: 'var(--color-foreground)'}}>☑ Send release notes to beta testers</span>
-                              <span style={{fontSize: '9px', color: 'var(--color-foreground-muted)'}}>Scheduled Tue</span>
-                            </div>
-                          </div>
-
-                          <div style={{marginTop: 'auto', paddingTop: '10px', borderTop: '1px solid var(--color-border)', display: 'flex', justifyContent: 'space-between', alignItems: 'center'}}>
-                            <span style={{fontSize: '11px', color: 'var(--color-foreground-muted)'}}>Sync to Calendar &amp; Task Manager</span>
-                            <span style={{fontFamily: 'var(--font-mono)', fontSize: '11px', color: 'var(--color-accent)', fontWeight: '600'}}>Export Plan →</span>
-                          </div>
-                        </div>
+                      <div key="tab-2" className="w-full h-full flex items-center justify-center" style={{animation: 'fadeIn 0.35s ease'}}>
+                        <img
+                          src={todoTasksWidgetImg}
+                          alt="Dark to-do tasks widget"
+                          style={{
+                            maxWidth: '100%',
+                            maxHeight: '380px',
+                            width: 'auto',
+                            height: 'auto',
+                            objectFit: 'contain',
+                            display: 'block',
+                            filter: 'drop-shadow(0 18px 36px color-mix(in srgb, var(--shadow-ink) 22%, transparent))',
+                            transition: 'transform 0.4s cubic-bezier(0.16, 1, 0.3, 1)',
+                            transformOrigin: 'center'
+                          }}
+                          className="hover:scale-[1.03]"
+                        />
                       </div>
                     )}
 
-                    {/* TAB 3: One workspace for work and life */}
+                    {/* TAB 3: Collections Dashboard Grid */}
                     {activeTab === 3 && (
-                      <div className="w-full h-full flex flex-col gap-3" style={{animation: 'fadeIn 0.35s ease'}}>
-                        {/* Device Sync Strip */}
-                        <div className="flex items-center justify-between" style={{padding: '10px 14px', borderRadius: 'var(--radius-sm)', background: 'var(--color-canvas-soft)', border: '1px solid var(--color-border)'}}>
-                          <span style={{fontFamily: 'var(--font-mono)', fontSize: '11px', fontWeight: '600', color: 'var(--color-foreground)'}}>
-                            Cross-Device Sync
-                          </span>
-                          <span style={{fontSize: '10px', padding: '2px 6px', borderRadius: '3px', background: 'rgba(22, 163, 74, 0.12)', color: 'var(--color-badge-new)', fontWeight: 'bold'}}>
-                            ● PC • Browser • Phone Synced
-                          </span>
-                        </div>
-
-                        {/* Connected Workspaces list */}
-                        <div style={{flex: '1', display: 'flex', flexDirection: 'column', gap: '8px'}}>
-                          {[
-                            { name: '💼 Startup & Projects', desc: 'Active roadmaps, architecture diagrams, and meeting transcripts', count: '32 items', status: 'Updated 5m ago' },
-                            { name: '🔬 Deep Research Vault', desc: 'AI research papers, bookmarks, and comparative benchmarks', count: '45 items', status: 'Synced' },
-                            { name: '🌱 Personal & Creative Plans', desc: 'Reading lists, workout logs, travel notes, and weekend goals', count: '18 items', status: 'Updated today' },
-                          ].map((item) => (
-                            <div
-                              key={item.name}
-                              style={{
-                                padding: '12px 14px',
-                                borderRadius: 'var(--radius-sm)',
-                                border: '1px solid var(--color-border)',
-                                background: 'var(--color-canvas)',
-                                display: 'flex',
-                                alignItems: 'center',
-                                justifyContent: 'space-between',
-                                boxShadow: '0 4px 12px rgba(0,0,0,0.04)'
-                              }}
-                            >
-                              <div style={{display: 'flex', flexDirection: 'column', gap: '2px'}}>
-                                <span style={{fontSize: '13px', fontWeight: '600', color: 'var(--color-foreground)'}}>
-                                  {item.name}
-                                </span>
-                                <span style={{fontSize: '11px', color: 'var(--color-foreground-muted)'}}>
-                                  {item.desc}
-                                </span>
-                              </div>
-                              <div className="flex items-center gap-2">
-                                <span style={{fontSize: '9px', fontFamily: 'var(--font-mono)', padding: '2px 5px', borderRadius: '3px', background: 'var(--color-canvas-soft)', border: '1px solid var(--color-border)', color: 'var(--color-foreground-muted)'}}>
-                                  {item.count}
-                                </span>
-                                <span style={{fontSize: '10px', color: 'var(--color-badge-new)', fontWeight: '600'}}>
-                                  {item.status}
-                                </span>
-                              </div>
-                            </div>
-                          ))}
-                        </div>
-
-                        {/* Bottom note */}
-                        <div style={{padding: '10px 14px', borderRadius: 'var(--radius-sm)', border: '1px solid var(--color-border)', background: 'var(--color-canvas)', display: 'flex', justifyContent: 'space-between', alignItems: 'center'}}>
-                          <span style={{fontSize: '11.5px', color: 'var(--color-foreground-muted)'}}>
-                            Pick up right where you left off on any device
-                          </span>
-                          <span style={{fontFamily: 'var(--font-mono)', fontSize: '11px', color: 'var(--color-accent)', fontWeight: '600', cursor: 'pointer'}}>
-                            Open Space Hub →
-                          </span>
-                        </div>
+                      <div key="tab-3" className="w-full h-full flex items-center justify-center" style={{animation: 'fadeIn 0.35s ease'}}>
+                        <img
+                          src={collectionsGridImg}
+                          alt="Dark collections dashboard grid"
+                          style={{
+                            maxWidth: '100%',
+                            maxHeight: '380px',
+                            width: 'auto',
+                            height: 'auto',
+                            objectFit: 'contain',
+                            display: 'block',
+                            filter: 'drop-shadow(0 18px 36px color-mix(in srgb, var(--shadow-ink) 22%, transparent))',
+                            transition: 'transform 0.4s cubic-bezier(0.16, 1, 0.3, 1)',
+                            transformOrigin: 'center'
+                          }}
+                          className="hover:scale-[1.03]"
+                        />
                       </div>
                     )}
 
